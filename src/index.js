@@ -1,5 +1,5 @@
 const express = require('express')
-const fetch = require("node-fetch");
+const fetch = require("node-fetch")
 const app = express()
 const port = 3000
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyyQnhwGbADX-UxRmrCetEhWJ4rRayffGzgJwt3Y5MOp1hp1z-r/exec'
