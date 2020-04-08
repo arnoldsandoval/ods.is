@@ -1,4 +1,5 @@
 {
     "name": "ods-is",
-    "version": 1
+    "version": 1,
+    "builds": [{"src": "app/index.js", "use": "@now/node-server"}]
 }
