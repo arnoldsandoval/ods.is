@@ -1,0 +1,20 @@
+{
+  "name": "ods.is",
+  "version": "0.0.1",
+  "description": "A simple node application that redirects users to different URLs from a shortlink (ods.is)",
+  "main": "index.js",
+  "repository": "https://github.com/arnoldsandoval-okta/ods.is",
+  "author": "Arnold Sandoval",
+  "license": "MIT",
+  "engines": {
+    "node": "12.13.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
+  }
+}

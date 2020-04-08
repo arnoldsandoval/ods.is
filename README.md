@@ -1,0 +1,2 @@
+# Odyssey shortlinks
+A simple Node/Express app which redirects users to relevant links using [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1sCrcRAZmlC6849YEcdDkM1CmbJY0OQec09LUORX_rs8/edit#gid=0) as the data source.
