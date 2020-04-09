@@ -8,26 +8,25 @@ const getData = async url => {
     try {
         const response = await fetch(url);
         const json = await response.json();
-        console.log(json);
         return json
     } catch (error) {
-        console.log(error);
         return 'error'
     }
 };
+
 app.get('*', async (req, res) => {
     if (req.originalUrl === '/') {
         return res.send('ods.is')
     } else {
          const data = await getData(SHEET_URL);
          const obj = data.find(x => x.path === req.originalUrl)
-         console.log(obj.path)
-        if (obj.path) {
-            return res.redirect(obj.url)
-        }
 
-        return res.send(req.originalUrl)
+         if (obj) {
+            return res.redirect(obj.url)
+        } else {
+            return res.status(404).send(`${req.originalUrl} not found`);
+        }   
     }
 })
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+app.listen(port, () => console.log(`Odyssey shortlinks listening at http://localhost:${port}`))
